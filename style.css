@@ -1,0 +1,253 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background-color: #E0E0E0;
+    position: fixed;
+}
+
+#flag-contain{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bottom{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: line;
+}
+
+#input{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#flag-contain img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+#popUp{
+    position: absolute;
+    top:0px;
+    right: 0vw;
+    width: 8vw;
+    margin: 1vw;
+}
+
+#compteur{
+    top:0px;
+    right: 0vw;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    font-size: 10px;
+}
+
+#next{
+    width: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+#next img{
+    width: min(8vw, 50px);
+    height: min(8vw, 50px);
+    object-fit: contain;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+input{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    font-size: 40px;
+    background-color: #E0E0E0;
+}
+
+input:focus{
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+#answer{
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #DC143C;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    font-size: 30px;
+}
+
+#popUp #total{
+    padding: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.line{
+    width: 50%;
+    margin-left: 25%;
+    height: 1px;
+    background-color: black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+a{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: line;
+    text-decoration:none;
+    color: black;
+}
+
+a:link 
+{ 
+    text-decoration:none; 
+    
+    color: black;
+} 
+
+a img{
+    width: 15%;
+    height: 15%;
+    object-fit: contain;
+}
+
+a p{
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    padding-bottom: 3px;
+    width: auto;
+    margin-left: 8px;
+}
+
+a p::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    left:0;
+    bottom:0px;
+    transition: .2s ease-in-out;
+    background-color: black;
+}
+
+a p:hover::after{
+    width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+    #popUp{
+        position: relative;
+        width: 100vw;
+        height: 75px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: line;
+        align-items: center;
+    }
+
+    #compteur{
+        width: 75px;
+        height: 75px;
+    }
+
+    #flag-contain{
+        margin-top: 100px;
+        height: calc(75vh - 95px);
+    }
+
+    #popUp #total{
+        padding: 3px;
+        text-align: center;
+        width: calc((100vw - 95px)*0.3);
+    }
+    .line{
+        width: 1px;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 50px;
+        background-color: black;
+        margin-top: calc((100vw - 95px)*0.1);
+        margin-bottom: calc((100vw - 95px)*0.1);
+    }
+    a{
+        width: calc((100vw - 95px)*0.3);
+    }
+    a img{
+        width: 15px;
+        height: 15px;
+    }
+
+    #next{
+        width: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0vh;
+        margin-left: 15px;
+    }
+  }
+
+  @media screen and (max-height: 375px) and (max-width: 750px) {
+    #popUp{
+        position: relative;
+        width: 100vw;
+        height: 45px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        flex-direction: line;
+        align-items: center;
+    }
+
+    #compteur{
+        width: 45px;
+        height: 45px;
+    }
+
+    
+    #flag-contain{
+        margin-top: 45px;
+        height: calc(75vh - 65px);
+    }
+  }

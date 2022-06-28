@@ -1,0 +1,77 @@
+html{
+    background-color: #E0E0E0;
+    overflow-x: overlay;
+}
+
+*{
+    overflow-x: hidden;
+}
+
+.el{
+    width: 100vw;
+    display: flex;
+    flex-direction: line;
+}
+
+.el img{
+    width: 50vw;
+    height: 20vw;
+    object-fit: contain;
+}
+
+.el p{
+    height: 20vw;
+    width: 40vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Chivo', sans-serif;
+    font-size: 4vw;
+}
+
+a{
+    width: 90vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: line;
+    text-decoration:none;
+    color: black;
+    overflow-y: hidden;
+}
+
+a:link 
+{ 
+    text-decoration:none; 
+    
+    color: black;
+} 
+
+a img{
+    width: 5vw;
+    height: 5vh;
+    object-fit: contain;
+}
+
+a p{
+    position: relative;
+    cursor: pointer;
+    padding: 3px;
+}
+
+a p::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    left:0;
+    bottom:0px;
+    transition: .2s ease-in-out;
+    background-color: black;
+}
+
+a p:hover::after{
+    width: 100%;
+}

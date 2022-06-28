@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="flag-contain">
+            <img src="" id="flag">
+        </div>
+        <div id="bottom">
+            <div id="input">
+                <input type="text" onkeydown="this.style.width = Math.max(((this.value.length + 2) * 25),180) + 'px';" onkeypress="this.style.width = Math.max(((this.value.length + 2) * 25),180) + 'px';" >
+            </div>
+        </div>
+        <div id="answer">
+            <p>Paris</p>
+        </div>
+    </main>
+    <div id="popUp">
+        <div id="compteur">
+            <h1></h1>
+        </div>
+        <p id="total">Total : </p>
+        <div class="line"></div>
+        <a href="testflag.html">
+            <img src="flag_icon.png">
+            <p>Voir liste</p>
+        </a>
+        <div id="next">
+            <img src="arrow.svg">
+        </div>
+    </div>
+</body>
+<script src="iso2code.js"></script>
+<script src="java.js"></script>
+</html>
