@@ -226,6 +226,13 @@ a p:hover::after{
         margin-top: 0vh;
         margin-left: 15px;
     }
+    input{
+        font-size: 3vw;
+        height: auto;
+    }
+    #answer{
+        font-size: 3vw;
+    }
   }
 
   @media screen and (max-height: 375px) and (max-width: 750px) {
